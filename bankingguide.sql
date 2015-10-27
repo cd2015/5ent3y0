@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Oct 27, 2015 at 06:19 AM
+-- Generation Time: Oct 27, 2015 at 07:58 AM
 -- Server version: 5.5.24-log
 -- PHP Version: 5.3.13
 
@@ -372,8 +372,8 @@ CREATE TABLE IF NOT EXISTS `forexusers` (
   `FxUserName` varchar(45) DEFAULT NULL COMMENT 'User Name for logging into the bank''s account',
   `FxUserPassword` varchar(45) DEFAULT NULL COMMENT 'Bank login password',
   `FxUserEmail` varchar(45) DEFAULT NULL COMMENT 'Email Id of the bank user',
-  `active` int(1) DEFAULT NULL,
-  `harsh` varchar(50) DEFAULT NULL,
+  `active` int(1) DEFAULT '0',
+  `hash` varchar(50) DEFAULT NULL,
   `FxUser_Time` datetime DEFAULT NULL COMMENT 'Time Stamp',
   PRIMARY KEY (`FxUserId`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='table for forex users' AUTO_INCREMENT=4 ;
@@ -382,7 +382,7 @@ CREATE TABLE IF NOT EXISTS `forexusers` (
 -- Dumping data for table `forexusers`
 --
 
-INSERT INTO `forexusers` (`FxUserId`, `FxUserName`, `FxUserPassword`, `FxUserEmail`, `active`, `harsh`, `FxUser_Time`) VALUES
+INSERT INTO `forexusers` (`FxUserId`, `FxUserName`, `FxUserPassword`, `FxUserEmail`, `active`, `hash`, `FxUser_Time`) VALUES
 (1, NULL, 'x%8ikFA', NULL, NULL, NULL, NULL),
 (2, NULL, '^x%8ikFA', NULL, NULL, NULL, NULL),
 (3, 'stanhope', 'XHAP+?m-', 'info@stanhope.com', NULL, NULL, '2015-10-27 06:01:23');
