@@ -1,0 +1,826 @@
+/* 
+    Document   : bankingguide
+    Created on : Oct 25, 2014, 11:12:21 AM
+    Author     : CHAR_IZZY
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+/* 
+   TODO customize this sample style
+   Syntax recommendation http://www.w3.org/TR/REC-CSS2/
+*/
+
+root { 
+    display: block;
+}
+
+/* this is the css for the body of the home page */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    width: 1000px;
+    text-align: center;
+    margin: 5px auto;
+
+    background-color: #000000;
+}
+
+#main {    
+    background-color: #000000;
+    
+}
+
+/*css for the header*/
+#header {
+    height: 50px;
+    width: 1000px;
+    
+    background-color: #00131a;
+}
+/*css for the logo*/
+#logo {
+    height:50px;
+    width: 150px;
+    float: left;
+    margin-left: 0px;
+    margin-top: 0px;
+
+    background-color: #000066;
+}
+
+/*css for the main menu bar*/
+#menuBar {
+    height: 40px;
+    width: 850px;
+    float: right;
+    margin-top: 10px;
+    
+    background-color: #00101f;
+}
+
+/*css for the elements of the main menu bar*/
+.menuelements {
+    width: 90px;
+    height: 40px;
+    margin: 0px 0px;
+    font-size: 10px;
+
+    float: left;
+    line-height: 25px;
+    
+    color: #ffffff;
+    background-color: #000000;
+}
+
+/*css for the panel that displays the pages main image
+the panel just below the menu bar*/
+#toppageimagepanel{
+    width: 1000px;
+    height: 200px;
+    margin-top: 5px;
+}
+
+#toppageimage{
+    width: 1000px;
+    height: 200px;
+    float: left;
+    margin-left: 0px;
+    margin-top: 0px;
+    background-color: #390101;
+}
+
+/*css for the central section of the home page that contain the sliders*/
+#homecenter{
+
+    width: 1000px;
+    height: 500px;
+    float: left;
+    font-size: 100px;
+    background-color: #1a1616;
+    color: #ffffff;
+}
+
+/*css for the left column that contains categories */
+#leftcolumn{
+    width: 230px;
+    margin-top: 5px;
+    background-color: #012929;
+    float: left;
+}
+
+/*css for the categories section in the left column*/
+#categories{
+    margin-top: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    background-color: #044c4c;
+    
+}
+
+/*css for each category elements in the left column*/
+.categoryelements{
+    color: #ffffff;
+    background-color: #067171;
+    margin-top: 1px;
+    margin-left: 1px;
+    margin-right: 1px;
+    
+    text-align: left;
+   }
+
+/*css for the subcategories  in the left column*/
+.subcategories{
+    margin-top: 1px;
+    margin-left: 30px;
+    margin-right: 1px;
+    margin-bottom: 1px;
+    background-color: #044c4c;
+    
+    
+}
+
+/*css for the subcategory elements in the left column*/
+.subcategoryelements{
+    color: #ffffff;
+    background-color: #067171;
+    margin-top: 1px;
+    margin-left: 1px;
+    margin-right: 1px;
+    
+    font-size: 12px;
+    
+    text-align: left;
+    
+}
+
+/*css for the middle column of all the pages (apart from the home page*/
+#middlecolumn{
+   width: 530px;
+   margin-top: 5px;
+   float: left;
+   margin-left: 5px;
+   margin-right: 5px;
+   background-color: #023838;
+}
+
+/*css for the forex bureau form on the forex rates per bureau page*/
+#forexbureau{
+    margin-top: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    color: #ffffff;
+}
+
+#loancalculator{
+   margin-top: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    color: #ffffff;
+    background-color: #067171;
+}
+
+/*css for the panel that contains articles information on the news and articles pages*/
+#articles{
+    margin-top: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    background-color: #044c4c;
+    text-align: left;
+}
+
+/*css for the middle column heading div in category view of the news and articles */
+#middlecolumnheading{
+    background-color: #067171;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 5px;
+    color: #ffffff;
+    
+    font-size: 40px;
+}
+
+/*css below is for the ATM
+summary information*/
+
+.information_summary{
+    margin-top: 1px;
+    margin-left: 1px;
+    margin-right: 1px;
+    background-color: #067171;
+    height: 100px;
+}
+
+.SummaryImage{
+    height: 90px;
+    width: 90px;
+    margin-top: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    float: left;
+
+    background-color: #1889a9;
+}
+
+.Summaryinformation{
+    width: 315px;
+    margin-top: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    float: left;
+}
+
+.Institutionname{
+    color:#ffffff;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.cardSoffer{
+    color:#ffffff;
+    font-size: 12px;
+}
+
+.cardSrestriction{
+    color:#ffffff;
+    font-size: 12px;
+}
+
+.Summarydetail{
+    margin-top: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    float: right;
+}
+
+.gotoDetail{
+    font-weight: bold;
+
+}
+
+.applyonlineS{
+   font-size: 14px;
+   margin-top: 50px;
+
+}
+
+/*css for the images of partners of money
+transfer agents on the agents transfer page*/
+
+.mtpartnersS{
+    height: 50px;
+    width: 320px;
+    margin-bottom: 1px;
+    margin-left: 1px;
+    margin-right: 1px;
+    margin-top: 1px;
+}
+
+.moneyTransferSpartner{
+    font-size: 9px;
+    width: 50px;
+    height:30px;
+    background-color: #1889a9;
+    margin-bottom: 2px;
+    margin-left: 2px;
+    margin-right: 2px;
+    margin-top: 2px;
+    float: left;
+}
+
+/*css for accounts
+summary information*/
+
+.accountTypes{
+    width: 157px;
+    float: left;
+    color: #ffffff;
+}
+
+.accountOffers{
+    width: 157px;
+    float: left;
+    color: #ffffff;
+}
+
+.mortgageSRate{
+    width: 78px;
+    float: left;
+    color: #ffffff;
+}
+
+.mortgageSLVR{
+    width: 78px;
+    float: left;
+    color: #ffffff;
+}
+
+.accntType{
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.accntOffer{
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.typesofaccounts{
+    font-size: 9px;
+}
+
+.offersonaccounts{
+    font-size: 9px;
+}
+
+/*css below is for the
+ATM detail information*/
+
+#instutionDlogo{
+
+}
+
+#institutionDname{
+    background-color: #067171;
+    margin-bottom: 0px;
+    margin-left: 1px;
+    margin-right: 1px;
+    margin-top: 1px;
+    font-weight: bold;
+    font-size: 25px;
+    color: #ffffff;
+    
+    
+}
+
+#applyonlineD{
+    background-color: #067171;
+    margin-bottom: 1px;
+    margin-left: 1px;
+    margin-right: 1px;
+    margin-top: 0px;
+    text-align: right;
+    
+}
+
+#applicationprocedure{
+   background-color: #067171;
+   margin-left: 1px;
+   margin-right: 1px;
+   margin-top: 1px;
+   color: #ffffff;
+}
+
+#typeofaccounts{
+   background-color: #067171;
+   margin-left: 1px;
+   margin-right: 1px;
+   margin-top: 1px;
+   color: #ffffff;
+}
+
+.Detailtitle{
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.Detailinformation{
+    font-size: 16px;
+}
+
+#ATMreplacementprocedure{
+   background-color: #067171;
+   margin-left: 1px;
+   margin-right: 1px;
+   margin-top: 1px;
+   color: #ffffff;
+}
+
+#eligibility{
+   background-color: #067171;
+   margin-left: 1px;
+   margin-right: 1px;
+   margin-top: 1px;
+   color: #ffffff;
+}
+
+#applicationrequirements{
+   background-color: #067171;
+   margin-left: 1px;
+   margin-right: 1px;
+   margin-top: 1px;
+   color: #ffffff;
+}
+
+#Detailoffer{
+   background-color: #067171;
+   margin-left: 1px;
+   margin-right: 1px;
+   margin-top: 1px;
+   color: #ffffff;
+}
+
+#cardDrestriction{
+   background-color: #067171;
+   margin-left: 1px;
+   margin-right: 1px;
+   margin-top: 1px;
+   color: #ffffff;
+}
+
+#ATMvisasupport{
+   background-color: #067171;
+   margin-left: 1px;
+   margin-right: 1px;
+   margin-top: 1px;
+   color: #ffffff;
+}
+
+#ATMlocations{
+   background-color: #067171;
+   margin-left: 1px;
+   margin-right: 1px;
+   margin-top: 1px;
+   color: #ffffff;
+}
+
+#ProcessingPeriod{
+    background-color: #067171;
+   margin-left: 1px;
+   margin-right: 1px;
+   margin-top: 1px;
+   color: #ffffff;
+}
+
+#ExpirationPeriod{
+    background-color: #067171;
+   margin-left: 1px;
+   margin-right: 1px;
+   margin-top: 1px;
+   color: #ffffff;
+}
+
+#cardDimage{
+   background-color: #067171;
+   margin-left: 1px;
+   margin-right: 1px;
+   margin-top: 1px;
+   height: 100px;
+   width: 200px;
+}
+
+/*css for partner information on
+the money transfer detail page*/
+.partnersDetail{
+   background-color: #067171;
+   margin-left: 1px;
+   margin-right: 1px;
+   margin-top: 1px;
+   color: #ffffff;
+}
+
+.PartnerImageDetail{
+    font-size: 9px;
+    width: 100px;
+    height:100px;
+    background-color: #1889a9;
+    margin-bottom: 2px;
+    margin-left: 2px;
+    margin-right: 2px;
+    margin-top: 2px;
+    float: right;
+}
+
+.PointsofSale{
+    font-size: 11px;
+}
+
+.partnerDinformation{
+    width: 517px;
+
+}
+
+/*css for the
+ATM graphs page*/
+
+.grapharea{
+   background-color: #067171;
+   margin-left: 5px;
+   margin-right: 5px;
+   margin-top: 5px;
+   color: #ffffff;
+   
+}
+
+.graphtitle{
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.graph{
+    height: 100px;
+    background-color: #1889a9;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+/*css for the weekly and monthly share
+price review on the securities pages*/
+
+#securitiescompanyname{
+    background-color: #067171;
+   margin-left: 1px;
+   margin-right: 1px;
+   margin-top: 1px;
+   color: #ffffff;
+}
+
+#monthform{
+    background-color: #067171;
+   margin-left: 1px;
+   margin-right: 1px;
+   margin-top: 1px;
+   color: #ffffff;
+}
+
+#weekform{
+    background-color: #067171;
+   margin-left: 1px;
+   margin-right: 1px;
+   margin-top: 1px;
+   color: #ffffff;
+}
+
+/*css for the ATM
+charges table page*/
+
+#tablearea{
+   background-color: #067171;
+   margin-left: 5px;
+   margin-right: 5px;
+   margin-top: 5px;
+   color: #ffffff;
+   
+}
+
+#tabletitle{
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#tables{
+    height: 200px;
+    background-color: #1889a9;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+/*css for the articles form*/
+#articlesform{
+    background-color: #067171;
+    margin-left: 1px;
+    margin-right: 1px;
+    margin-top: 1px;
+    color: #ffffff;
+    font-size: 30px;
+    height: 400px;
+}
+
+/*css for the panels that contain the article summary information for the summary
+view and category of the news and articles*/
+.articleelements{
+    color: #ffffff;
+    background-color: #067171;
+    margin-top: 1px;
+    margin-left: 1px;
+    margin-right: 1px;
+    height: 100px;
+}
+
+/*css for the for the article image in the summarized and category view of
+the news and articles*/
+.articleSimage{
+    float: left;
+    width: 95px;
+    height: 95px;
+    background-color: #0ea8a8;
+    margin-top:3px;
+    margin-left:3px;
+    margin-right:3px;
+    margin-bottom:3px;
+}
+
+/*css for the for the  article title in the summarized and category view of
+the news and articles*/
+.articleSTitle{
+   font-weight: bold;
+   float: left;
+   font-size: 16px;
+   width:300px;
+   text-align: left;
+   
+   }
+/*css for the for the  article category in the summarized and category view of
+the news and articles*/
+.articleScategory{
+   float: right;
+   font-size: 12px;
+}
+
+/*css for the for the  article Summary in the summarized and category view of
+the news and articles*/
+.articleSummary{
+    float:left;
+    font-size: 10px;
+    width:300px;
+    text-align: left;
+    }
+
+ /*css for the for the  article date in the summarized and category view of
+the news and articles*/
+.articleSdate{
+    float:right;
+    font-size: 11px
+}
+
+/*css for the for the  article detail link in the summarized and category view of
+the news and articles*/
+.articleDetail{
+    float:left;
+    font-size: 9px;
+    }
+
+    /*This is the css for the article title on the article page*/
+#articleDTitle{
+    background-color: #067171;
+    float: left;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 25px;
+    width: 518px;
+    margin-top: 1px;
+    margin-left: 1px;
+    margin-right: 1px;
+  
+}
+
+/*css for the article image on the article detail page*/
+#articleDimage{
+    background-color: #067171;
+    float: left;
+    color: #ffffff;
+    font-size: 20px;
+    width: 300px;
+    height: 300px;
+    margin-top: 1px;
+    margin-left: 1px;
+    margin-right: 1px;
+}
+
+/*css for the article category on the article detail page*/
+#articleDcategory{
+    float: right;
+    font-weight: bold;
+    font-size: 16px;
+    margin-top: 1px;
+    margin-left: 1px;
+    margin-right: 1px;
+    float: left;
+    background-color: #067171;
+    width: 215px
+}
+
+/*css for the article editor's category on the article detail page*/
+#articleEditor{
+    background-color: #067171;
+    float: left;
+    color: #ffffff;
+    font-size: 14px;
+    margin-top: 1px;
+    margin-left: 1px;
+    margin-right: 1px;
+    width:215px;
+}
+
+/*css for the article editor's picture on the article detail page*/
+#articleEditorimage{
+    background-color: #067171;
+    float: left;
+    color: #ffffff;
+    font-size: 12px;
+    margin-top: 0px;
+    margin-left: 1px;
+    margin-right: 1px;
+    width:150px;
+    height:150px;
+}
+
+/*css for the article date on the article detail page*/
+#articleDdate{
+    background-color: #067171;
+    float: left;
+    color: #ffffff;
+    font-size: 14px;
+    margin-top: 0px;
+    margin-left: 1px;
+    margin-right: 1px;
+    width:215px;
+}
+
+/*css for the article content on the article detail page*/
+#articleContent{
+    background-color: #067171;
+    float: left;
+    color: #ffffff;
+    font-size: 14px;
+    margin-top: 1px;
+    margin-left: 1px;
+    margin-right: 1px;
+    width:512px;
+    padding: 5px;
+}
+
+/*css for the more articles link title in the summarized and category view of
+the news and articles*/
+#morearticles{
+    margin-top: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    background-color: #067171;
+    font-weight: bold;
+}
+
+/*css for the right column that contains Ads*/
+#rightcolumn{
+    width: 230px;
+    margin-top: 5px;
+    background-color: #023838;
+    height: 400px;
+    float: left;
+    color: #ffffff
+}
+
+/*css for the column that contains forms on my account pages*/
+#formcolumn{
+    width: 760px;
+    margin-top: 5px;
+    background-color: #023838;
+    float: left;
+    color: #ffffff
+}
+
+/*css for the Ads panel on the home page*/
+#homeAds{
+    width: 950px;
+    height: 190px;
+    float: left;
+    margin-left: 25px;
+}
+
+/*css for the Ads sections on the home page*/
+.AdElement{
+    width: 188px;
+    height: 188px;
+    float: left;
+
+    background-color: #320000;
+    color: #ffffff;
+    border-left-style: solid;
+    border-left-width: 1px;
+    border-left-color: #000000;
+}
+
+/*css for the footer*/
+#footer {
+    height: 60px;
+    clear: left;
+    background-color: #00131a;
+
+    color: #ffffff;
+}
+
+
+
+/*css for the user login form*/
+#userlogin{
+    
+    margin-top: 5px;
+    background-color: #023838;
+    float: left;
+    color: #ffffff;
+    font-size:16px;
+    margin-left: 400px;
+    margin-top: 150px;
+  
+}
