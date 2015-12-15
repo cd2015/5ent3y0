@@ -1,25 +1,21 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>Welcome to OpenShift</title>
-</head>
-<body>
+<?php
 
-<section class='container'>
-          <hgroup>
-            <h1>Welcome to Senteyo</h1>
-          </hgroup>
+/*
+ * Cyber Dynamics
+ * Banking GUide Project: Sneteyo
+ * Module: Main
+ */
+require_once('connection.php');
 
+/*
+  if (isset($_GET['controller']) && isset($_GET['action'])) {
+  $controller = $_GET['controller'];
+  $action = $_GET['action'];
+  } else {
+  $controller = 'pages';
+  $action = 'index';
+  }
+ */
 
-
-
-
-        <footer>
-          <div class="logo">&copy; <a href="https://www.cyberdynamics.co.ug/">Cyber Dynamics</a> 2015</div>
-        </footer>
-</section>
- 
-</body>
-</html>
+require_once('views/layout.php');
+?>
