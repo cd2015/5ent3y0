@@ -4,6 +4,26 @@
  * Banking Project: 
  * Forex Module: login main
  */
+$db = Db::getDbInstance();
+
+$query_forex = $db->query('SELECT * FROM forexusers');
+$query_banks = $db->query('SELECT * FROM bankusers');
+$query_sacco = $db->query('SELECT * FROM saccousers');
+$query_microfinance = $db->query('SELECT * FROM microfinusers');
+$query_moneytransfer = $db->query('SELECT * FROM moneytansferagents');
+
+$query_last_added_user = $db->query('SELECT * FROM forexusers ORDER BY FxUserId DESC LIMIT 1');
+$row = $query_last_added_user->fetchObject();
+$forexusers = $query_forex_result = $query_forex->rowCount();
+$bankusers = $query_banks_result = $query_banks->rowCount();
+$saccousers = $query_sacco_result = $query_sacco->rowCount();
+$microfinusers = $query_microfinance_result = $query_microfinance->rowCount();
+$mmagents = $query_moneytransfer_result = $query_moneytransfer->rowCount();
+
+if ($forexusers > 0) {
+    $recent_forex_name = $row->FxUserName;
+    $recent_forex_email = $row->FxUserEmail;
+}
 ?>
 <body id="top" class="hold-transition skin-teal sidebar-mini">
     <div class="wrapper" style="min-height: 800px;">  
@@ -30,7 +50,7 @@
                 <div class="navbar-custom-menu">
                     <ul class="nav navbar-nav">
                         <!-- Messages: style can be found in dropdown.less-->
-                        <li class="dropdown messages-menu">
+                        <li class="dropdown messages-menu" style="display: none">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                                 <i class="fa fa-envelope-o"></i>
                                 <span class="label label-success">125</span>
@@ -109,7 +129,7 @@
                         <li class="dropdown notifications-menu">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                                 <i class="fa fa-bell-o"></i>
-                                <span class="label label-warning">10</span>
+                                <span class="label label-info">4</span>
                             </a>
                             <ul class="dropdown-menu">
                                 <li class="header">You have 10 notifications</li>
@@ -149,18 +169,18 @@
                         <!-- Tasks: style can be found in dropdown.less -->
                         <li class="dropdown tasks-menu">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                <i class="fa fa-flag-o"></i>
-                                <span class="label label-danger">9</span>
+                                <i class="fa fa-calendar"></i>
+                                <span class="label label-danger">3</span>
                             </a>
                             <ul class="dropdown-menu">
-                                <li class="header">You have 9 tasks</li>
+                                <li class="header">You have 3 tasks</li>
                                 <li>
                                     <!-- inner menu: contains the actual data -->
                                     <ul class="menu">
                                         <li><!-- Task item -->
                                             <a href="#">
                                                 <h3>
-                                                    Design some buttons
+                                                    Change some Forex Rates
                                                     <small class="pull-right">20%</small>
                                                 </h3>
                                                 <div class="progress xs">
@@ -173,7 +193,7 @@
                                         <li><!-- Task item -->
                                             <a href="#">
                                                 <h3>
-                                                    Create a nice theme
+                                                    Add some currencies
                                                     <small class="pull-right">40%</small>
                                                 </h3>
                                                 <div class="progress xs">
@@ -186,7 +206,7 @@
                                         <li><!-- Task item -->
                                             <a href="#">
                                                 <h3>
-                                                    Some task I need to do
+                                                    Change details for Branch X on Kings Road
                                                     <small class="pull-right">60%</small>
                                                 </h3>
                                                 <div class="progress xs">
@@ -291,49 +311,30 @@
                 <ul class="sidebar-menu">
                     <li class="active treeview">
                         <a href="#">
-                            <i class="fa fa-dashboard"></i> <span>Dashboard</span> <i class="fa fa-angle-left pull-right"></i>
-                        </a>
-                        <ul class="treeview-menu">
-                            <li class="active"><a href="index.html"><i class="fa fa-circle-o"></i> Home</a></li>
-                            <li><a href="index2.html"><i class="fa fa-circle-o"></i>History</a></li>
-                        </ul>
-                    </li>
-                    <li class="treeview">
-                        <a href="#">
-                            <i class="fa fa-files-o"></i>
-                            <span>Options</span>
-                            <span class="label label-primary pull-right">4</span>
-                        </a>
-                        <ul class="treeview-menu">
-                            <li><a href="#"><i class="fa fa-circle-o"></i> Top Navigation</a></li>
-                            <li><a href="#"><i class="fa fa-circle-o"></i> Boxed</a></li>
-                            <li><a href="#"><i class="fa fa-circle-o"></i> Fixed</a></li>
-                            <li><a href="#"><i class="fa fa-circle-o"></i> Collapsed Sidebar</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <i class="fa fa-th"></i> <span>Manage Currencies</span> <small class="label pull-right bg-green">new</small>
+                            <i class="fa fa-dashboard"></i>Dashboard
                         </a>
                     </li>
                     <li class="treeview">
                         <a href="#">
-                            <i class="fa fa-edit"></i> <span>Branches</span>
+                            <i class="fa fa-money"></i> <span>Rates</span>
                             <i class="fa fa-angle-left pull-right"></i>
                         </a>
                         <ul class="treeview-menu">
-                            <li><a href="#"><i class="fa fa-circle-o"></i> Add New Branch</a></li>
-                            <li><a href="#"><i class="fa fa-circle-o"></i> Edit Branch</a></li>
-                            <li><a href="#"><i class="fa fa-circle-o"></i>Delete Branch</a></li>
+                            <li><a href="#"><i class="fa fa-circle-o"></i> All Rates</a></li>
+                            <li><a href="#"><i class="fa fa-circle-o"></i>Add Rate</a></li>
                         </ul>
                     </li>
-                    <li>
-                        <a href="#">
-                            <i class="fa fa-calendar"></i> <span>Calendar</span>
-                            <small class="label pull-right bg-red">3</small>
-                        </a>
-                    </li>
                     <li class="treeview">
+                        <a href="#">
+                            <i class="fa fa-sitemap"></i> <span>Branches</span>
+                            <i class="fa fa-angle-left pull-right"></i>
+                        </a>
+                        <ul class="treeview-menu">
+                            <li><a href="#"><i class="fa fa-circle-o"></i> All Branches</a></li>
+                            <li><a href="#"><i class="fa fa-circle-o"></i> Add Branch</a></li>
+                        </ul>
+                    </li>
+                    <li class="treeview" style="display: none">
                         <a href="#">
                             <i class="fa fa-share"></i> <span>Multilevel</span>
                             <i class="fa fa-angle-left pull-right"></i>
@@ -356,7 +357,7 @@
                             <li><a href="#"><i class="fa fa-circle-o"></i> Level One</a></li>
                         </ul>
                     </li>
-                    <li><a href="#"><i class="fa fa-book"></i> <span>Create Notes</span></a></li>
+
                     <li class="treeview">
                         <a href="#">
                             <i class="fa fa-pie-chart"></i>
@@ -369,6 +370,30 @@
                             <li><a href="#"><i class="fa fa-circle-o"></i>Forex Rating</a></li>
                             <li><a href="#"><i class="fa fa-circle-o"></i>Charts</a></li>
                         </ul>
+                    </li>
+                    <li class="treeview" >
+                        <a href="#">
+                            <i class="fa fa-bell-o"></i>
+                            <span>Notifications</span>
+                            <span class="label label-info pull-right">4</span>
+                        </a>
+                    </li>
+                    <li class="treeview">
+                        <a href="#">
+                            <i class="fa fa-gears"></i> <span>Settings</span>
+                            <i class="fa fa-angle-left pull-right"></i>
+                        </a>
+                        <ul class="treeview-menu">
+                            <li><a href="#"><i class="fa fa-circle-o"></i>My Account</a></li>
+                            <li><a href="#"><i class="fa fa-circle-o"></i>Branches</a></li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-calendar"></i> <span>To Do</span>
+                            <small class="label pull-right bg-red">3</small>
+                        </a>
                     </li>
                     <li class="header">SUPPORT</li>
                     <li><a href="#"><i class="fa fa-circle-o text-red"></i> <span>Tips</span></a></li>
@@ -394,87 +419,186 @@
             </section>
 
             <!-- Main content -->
-            <section class="content" style="display: none">
-                <!-- Small boxes (Stat box) -->
-                <div class="row">
-                    <div class="col-lg-3 col-xs-6">
-                        <!-- small box -->
-                        <div class="small-box bg-aqua">
-                            <div class="inner">
-                                <h3>150</h3>
-                                <p>New Orders</p>
-                            </div>
-                            <div class="icon">
-                                <i class="ion ion-bag"></i>
-                            </div>
-                            <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
-                        </div>
-                    </div><!-- ./col -->
-                    <div class="col-lg-3 col-xs-6">
-                        <!-- small box -->
-                        <div class="small-box bg-green">
-                            <div class="inner">
-                                <h3>53<sup style="font-size: 20px">%</sup></h3>
-                                <p>Bounce Rate</p>
-                            </div>
-                            <div class="icon">
-                                <i class="ion ion-stats-bars"></i>
-                            </div>
-                            <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
-                        </div>
-                    </div><!-- ./col -->
-                    <div class="col-lg-3 col-xs-6">
-                        <!-- small box -->
-                        <div class="small-box bg-yellow">
-                            <div class="inner">
-                                <h3>44</h3>
-                                <p>User Registrations</p>
-                            </div>
-                            <div class="icon">
-                                <i class="ion ion-person-add"></i>
-                            </div>
-                            <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
-                        </div>
-                    </div><!-- ./col -->
-                    <div class="col-lg-3 col-xs-6">
-                        <!-- small box -->
-                        <div class="small-box bg-red">
-                            <div class="inner">
-                                <h3>65</h3>
-                                <p>Unique Visitors</p>
-                            </div>
-                            <div class="icon">
-                                <i class="ion ion-pie-graph"></i>
-                            </div>
-                            <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
-                        </div>
-                    </div><!-- ./col -->
-                </div><!-- /.row -->
-                <!-- Main row -->
-                <div class="row">
-                    <!-- Left col -->
-                    <section class="col-lg-7 connectedSortable">
-                        <!-- Custom tabs (Charts with tabs)-->
-                        <div class="nav-tabs-custom">
-                            <!-- Tabs within a box -->
-                            <ul class="nav nav-tabs pull-right">
-                                <li class="active"><a href="#" data-toggle="tab">Area</a></li>
-                                <li><a href="#" data-toggle="tab">Donut</a></li>
-                                <li class="pull-left header"><i class="fa fa-inbox"></i> Sales</li>
-                            </ul>
-                            <div class="tab-content no-padding">
-                                <!-- Morris chart - Sales -->
-                                <div class="chart tab-pane active" id="revenue-chart" style="position: relative; height: 300px;"></div>
-                                <div class="chart tab-pane" id="sales-chart" style="position: relative; height: 300px;"></div>
-                            </div>
-                        </div><!-- /.nav-tabs-custom -->
+            <section class="content">
 
-                        <!-- TO DO List -->
-                        <div class="box box-primary">
+                <div class="row">
+                    <div class="col-lg-9 col-md-12 col-sm-12 col-xs-12">
+
+                        <div class="box allusers">
                             <div class="box-header">
-                                <i class="ion ion-clipboard"></i>
-                                <h3 class="box-title">To Do List</h3>
-                                <div class="box-tools pull-right">
+                                <h3 class="box-title">My Rates</h3>
+                            </div><!-- /.box-header -->
+                            <div class="example-modal" id="userOperation">
+                                <div class="modal modal-danger deleteUser">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                                <h4 class="modal-title">Deleting User</h4>
+                                            </div>
+                                            <div class="modal-body">
+                                                <p>You are about to delete 
+                                                    <span class="name" style="font-size:15px; font-weight: 600">Crane Forex Bureau</span>,<br/> with email address 
+                                                    <span class="email" style="font-size:15px; font-weight: 600">sowed@emil.com </span> from the Database
+                                                </p>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button id="cancel" type="button" class="btn btn-outline pull-left" data-dismiss="modal">Cancel</button>
+                                                <button id="confirm" type="button" class="btn btn-outline">Confirm</button>
+                                            </div>
+                                        </div><!-- /.modal-content -->
+                                    </div><!-- /.modal-dialog -->
+                                </div><!-- /.modal -->
+                                <div class="modal modal-info editUser">
+                                    <div class="modal-dialog  bg-teal">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                                <h4 class="modal-title">Editing User</h4>
+                                            </div>
+                                            <form method="post" name="edit_user" id="editUserForm">
+                                                <div class="modal-body">
+                                                    <!-- general form elements -->
+                                                    <!-- Editing new User -->
+                                                    <div class="box box-infos">
+                                                        <div class="box-body">
+                                                            <br>User Account
+                                                            <div class="input-group">
+                                                                <label for="usernameID" class="input-group-addon"><i class="fa fa-user" title="Click to enter the user account name"></i></label>
+                                                                <input name="username" id="usernameID" type="text" maxlength="50" class="form-control" placeholder="User Name" required="true">
+                                                            </div>
+                                                            <br>
+                                                            <div class="input-group">
+                                                                <label for="useremailID" class="input-group-addon"><i class="fa fa-envelope"></i></label>
+                                                                <input name="useremail" id="useremailID" type="email" maxlength="50" class="form-control" placeholder="Email Address" required="true">
+                                                            </div>
+                                                            <br>
+                                                            <p>Category</p>
+                                                            <div class="input-group">
+                                                                <label for="usertypeID" class="input-group-addon"><i class="fa fa-users"></i></label>
+                                                                <select name="usercategory" id="usertypeID" class="form-control" >
+                                                                    <option value="forex">Forex Bureau</option>
+                                                                    <option value="bank">Bank</option>
+                                                                    <option value="sacco">SACCO</option>
+                                                                    <option value="micro">Microfinance</option>
+                                                                    <option value="moneyTrans">Money Transfer</option>
+                                                                </select>
+                                                            </div>
+                                                            <br>
+                                                            <input name="userpassword" type="password" maxlength="25" hidden="true" />
+                                                        </div><!-- /.box-body -->
+                                                    </div><!-- /.box -->
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button id="cancel" type="button" class="btn btn-outline pull-left" data-dismiss="modal">Cancel</button>
+                                                    <input id="confirm"  name="edituser" type="button" value="Confirm Edit" class="btn btn-info confirm-edit pull-right"/>
+                                                </div>    
+                                            </form>
+                                        </div><!-- /.modal-content -->
+                                    </div><!-- /.modal-dialog -->
+                                </div><!-- /.modal -->
+                            </div><!-- /.example-modal -->
+
+                            <div class="box-body table-responsive no-padding">
+                                <table class="table table-hover">
+                                    <tr>
+                                        <th>Currency</th>
+                                        <th>Buying</th>
+                                        <th>Selling</th>
+                                        <th>Code</th>
+                                        <th colspan="2">Last Updated</th>
+                                    </tr>
+                                    <?php
+                                    if ($forexusers > 0) {
+                                        $query_forex_users = $db->query('SELECT * FROM forexusers ORDER BY FxUserId ASC');
+
+                                        $sql = 'SELECT name, color, calories FROM fruit ORDER BY name';
+
+                                        foreach ($query_forex_users as $fx_row_user) {
+                                            ?>
+                                            <tr>
+                                                <td class="ucategory"><?php echo "Forex Bureau" ?></td>
+                                                <td class="uname"><?php echo $fx_row_user["FxUserName"]; ?></td>
+                                                <td class="uemail"><?php echo $fx_row_user["FxUserEmail"]; ?></td>
+                                                <td class="ustatus">
+                                                    <?php if ($fx_row_user["active"] == 1) { ?>
+                                                        <span class="label label-primary">Active</span>
+                                                    <?php } else { ?>
+                                                        <span class="label label-gray">Inactive</span>
+                                                    <?php } ?>
+                                                </td>
+                                                <td class="udate"><?php echo $fx_row_user["FxUser_Time"] ?></td>
+                                                <td>
+                                                    <ul class="tools" id="<?php echo $fx_row_user["FxUserId"] ?>">
+                                                        <i class="fa fa-trash-o" title="Delete <?php echo $fx_row_user["FxUserName"]; ?>"></i>
+                                                        <i class="fa  fa-edit" title="Edit <?php echo $fx_row_user["FxUserName"]; ?>"></i>
+                                                    </ul>
+                                                </td>
+                                            </tr>
+                                            <?php
+                                        }
+                                        $db = NULL;
+                                    } else {
+                                        ?>
+                                        <tr>
+                                            <td colspan="5">
+                                                <p style="text-align: center; padding: 20px; background-color: #F9C9C9; cursor: help" title="No users in system">There are currently no registered Users</p>
+                                            </td>
+                                        </tr>';
+                                    <?php }
+                                    ?>
+
+
+                                    <tr>
+                                        <td class="ucategory">
+                                            <i class="fa fa-dollar pull-left"></i><span>USD</span>
+                                        </td>
+                                        <td class="currency">US Dollar</td>
+                                        <td class="buying">3500</td>
+                                        <td class="selling">3800</td>
+                                        <td class="udate">Monday, Dec 12 2015</td>
+                                        <td>
+                                            <ul class="tools" id="99">
+                                                <i class="fa fa-trash-o" title="Delete"></i>
+                                                <i class="fa  fa-edit" title="Edit"></i>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="ucategory">
+                                            <i class="fa fa-gbp pull-left"></i><span>GBP</span>
+                                        </td>
+                                        <td class="currency">Pound Sterling</td>
+                                        <td class="buying">5100</td>
+                                        <td class="selling">5200</td>
+                                        <td class="udate">Tuesday, Dec 12 2015</td>
+                                        <td>
+                                            <ul class="tools" id="99">
+                                                <i class="fa fa-trash-o" title="Delete"></i>
+                                                <i class="fa  fa-edit" title="Edit"></i>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="ucategory">
+                                            <i class="fa fa-eur pull-left"></i><span>EUR</span>
+                                        </td>
+                                        <td class="currency">European Euro</td>
+                                        <td class="buying">3720</td>
+                                        <td class="selling">3520</td>
+                                        <td class="udate">Friday, Dec 12 2015</td>
+                                        <td>
+                                            <ul class="tools" id="99">
+                                                <i class="fa fa-trash-o" title="Delete"></i>
+                                                <i class="fa  fa-edit" title="Edit"></i>
+                                            </ul>
+                                        </td>
+                                    </tr>
+
+                                </table>
+                            </div><!-- /.box-body -->
+                            <div class="box-footer clearfix no-border" style="background-color: rgb(246, 254, 254)">
+                                <div class="box-tools pull-left">
                                     <ul class="pagination pagination-sm inline">
                                         <li><a href="#">&laquo;</a></li>
                                         <li><a href="#">1</a></li>
@@ -483,339 +607,92 @@
                                         <li><a href="#">&raquo;</a></li>
                                     </ul>
                                 </div>
-                            </div><!-- /.box-header -->
-                            <div class="box-body">
-                                <ul class="todo-list">
-                                    <li>
-                                        <!-- drag handle -->
-                                        <span class="handle">
-                                            <i class="fa fa-ellipsis-v"></i>
-                                            <i class="fa fa-ellipsis-v"></i>
-                                        </span>
-                                        <!-- checkbox -->
-                                        <input type="checkbox" value="" name="">
-                                        <!-- todo text -->
-                                        <span class="text">Design a nice theme</span>
-                                        <!-- Emphasis label -->
-                                        <small class="label label-danger"><i class="fa fa-clock-o"></i> 2 mins</small>
-                                        <!-- General tools such as edit or delete-->
-                                        <div class="tools">
-                                            <i class="fa fa-edit"></i>
-                                            <i class="fa fa-trash-o"></i>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <span class="handle">
-                                            <i class="fa fa-ellipsis-v"></i>
-                                            <i class="fa fa-ellipsis-v"></i>
-                                        </span>
-                                        <input type="checkbox" value="" name="">
-                                        <span class="text">Make the theme responsive</span>
-                                        <small class="label label-info"><i class="fa fa-clock-o"></i> 4 hours</small>
-                                        <div class="tools">
-                                            <i class="fa fa-edit"></i>
-                                            <i class="fa fa-trash-o"></i>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <span class="handle">
-                                            <i class="fa fa-ellipsis-v"></i>
-                                            <i class="fa fa-ellipsis-v"></i>
-                                        </span>
-                                        <input type="checkbox" value="" name="">
-                                        <span class="text">Let theme shine like a star</span>
-                                        <small class="label label-warning"><i class="fa fa-clock-o"></i> 1 day</small>
-                                        <div class="tools">
-                                            <i class="fa fa-edit"></i>
-                                            <i class="fa fa-trash-o"></i>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <span class="handle">
-                                            <i class="fa fa-ellipsis-v"></i>
-                                            <i class="fa fa-ellipsis-v"></i>
-                                        </span>
-                                        <input type="checkbox" value="" name="">
-                                        <span class="text">Let theme shine like a star</span>
-                                        <small class="label label-success"><i class="fa fa-clock-o"></i> 3 days</small>
-                                        <div class="tools">
-                                            <i class="fa fa-edit"></i>
-                                            <i class="fa fa-trash-o"></i>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <span class="handle">
-                                            <i class="fa fa-ellipsis-v"></i>
-                                            <i class="fa fa-ellipsis-v"></i>
-                                        </span>
-                                        <input type="checkbox" value="" name="">
-                                        <span class="text">Check your messages and notifications</span>
-                                        <small class="label label-primary"><i class="fa fa-clock-o"></i> 1 week</small>
-                                        <div class="tools">
-                                            <i class="fa fa-edit"></i>
-                                            <i class="fa fa-trash-o"></i>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <span class="handle">
-                                            <i class="fa fa-ellipsis-v"></i>
-                                            <i class="fa fa-ellipsis-v"></i>
-                                        </span>
-                                        <input type="checkbox" value="" name="">
-                                        <span class="text">Let theme shine like a star</span>
-                                        <small class="label label-default"><i class="fa fa-clock-o"></i> 1 month</small>
-                                        <div class="tools">
-                                            <i class="fa fa-edit"></i>
-                                            <i class="fa fa-trash-o"></i>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div><!-- /.box-body -->
-                            <div class="box-footer clearfix no-border">
-                                <button class="btn btn-default pull-right"><i class="fa fa-plus"></i> Add item</button>
-                            </div>
-                        </div><!-- /.box -->
-                        <!-- Chat box -->
-                        <div class="box box-success">
-                            <div class="box-header">
-                                <i class="fa fa-comments-o"></i>
-                                <h3 class="box-title">Chat</h3>
-                                <div class="box-tools pull-right" data-toggle="tooltip" title="Status">
-                                    <div class="btn-group" data-toggle="btn-toggle" >
-                                        <button type="button" class="btn btn-default btn-sm active"><i class="fa fa-square text-green"></i></button>
-                                        <button type="button" class="btn btn-default btn-sm"><i class="fa fa-square text-red"></i></button>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="box-body chat" id="chat-box">
-                                <!-- chat item -->
-                                <div class="item">
-                                    <img src="#" alt="user image" class="online">
-                                    <p class="message">
-                                        <a href="#" class="name">
-                                            <small class="text-muted pull-right"><i class="fa fa-clock-o"></i> 2:15</small>
-                                            Mike Doe
-                                        </a>
-                                        I would like to meet you to discuss the latest news about
-                                        the arrival of the new theme. They say it is going to be one the
-                                        best themes on the market
-                                    </p>
-                                    <div class="attachment">
-                                        <h4>Attachments:</h4>
-                                        <p class="filename">
-                                            Theme-thumbnail-image.jpg
-                                        </p>
-                                        <div class="pull-right">
-                                            <button class="btn btn-primary btn-sm btn-flat">Open</button>
-                                        </div>
-                                    </div><!-- /.attachment -->
-                                </div><!-- /.item -->
-                                <!-- chat item -->
-                                <div class="item">
-                                    <img src="#" alt="user image" class="offline">
-                                    <p class="message">
-                                        <a href="#" class="name">
-                                            <small class="text-muted pull-right"><i class="fa fa-clock-o"></i> 5:15</small>
-                                            Alexander Pierce
-                                        </a>
-                                        I would like to meet you to discuss the latest news about
-                                        the arrival of the new theme. They say it is going to be one the
-                                        best themes on the market
-                                    </p>
-                                </div><!-- /.item -->
-                                <!-- chat item -->
-                                <div class="item">
-                                    <img src="#" alt="user image" class="offline">
-                                    <p class="message">
-                                        <a href="#" class="name">
-                                            <small class="text-muted pull-right"><i class="fa fa-clock-o"></i> 5:30</small>
-                                            Susan Doe
-                                        </a>
-                                        I would like to meet you to discuss the latest news about
-                                        the arrival of the new theme. They say it is going to be one the
-                                        best themes on the market
-                                    </p>
-                                </div><!-- /.item -->
-                            </div><!-- /.chat -->
-                            <div class="box-footer">
-                                <div class="input-group">
-                                    <input class="form-control" placeholder="Type message...">
-                                    <div class="input-group-btn">
-                                        <button class="btn btn-success"><i class="fa fa-plus"></i></button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div><!-- /.box (chat box) -->
-
-
-                        <!-- quick email widget -->
-                        <div class="box box-info">
-                            <div class="box-header">
-                                <i class="fa fa-envelope"></i>
-                                <h3 class="box-title">Quick Email</h3>
-                                <!-- tools box -->
-                                <div class="pull-right box-tools">
-                                    <button class="btn btn-info btn-sm" data-widget="remove" data-toggle="tooltip" title="Remove"><i class="fa fa-times"></i></button>
-                                </div><!-- /. tools -->
-                            </div>
-                            <div class="box-body">
-                                <form action="#" method="post">
-                                    <div class="form-group">
-                                        <input type="email" class="form-control" name="emailto" placeholder="Email to:">
-                                    </div>
-                                    <div class="form-group">
-                                        <input type="text" class="form-control" name="subject" placeholder="Subject">
-                                    </div>
-                                    <div>
-                                        <textarea class="textarea" placeholder="Message" style="width: 100%; height: 125px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;"></textarea>
-                                    </div>
-                                </form>
-                            </div>
-                            <div class="box-footer clearfix">
-                                <button class="pull-right btn btn-default" id="sendEmail">Send <i class="fa fa-arrow-circle-right"></i></button>
-                            </div>
-                        </div>
-
-                    </section><!-- /.Left col -->
-                    <!-- right col (We are only adding the ID to make the widgets sortable)-->
-                    <section class="col-lg-5 connectedSortable">
-
-                        <!-- Map box -->
-                        <div class="box box-solid bg-light-blue-gradient">
-                            <div class="box-header">
-                                <!-- tools box -->
-                                <div class="pull-right box-tools">
-                                    <button class="btn btn-primary btn-sm daterange pull-right" data-toggle="tooltip" title="Date range"><i class="fa fa-calendar"></i></button>
-                                    <button class="btn btn-primary btn-sm pull-right" data-widget="collapse" data-toggle="tooltip" title="Collapse" style="margin-right: 5px;"><i class="fa fa-minus"></i></button>
-                                </div><!-- /. tools -->
-
-                                <i class="fa fa-map-marker"></i>
-                                <h3 class="box-title">
-                                    Visitors
-                                </h3>
-                            </div>
-                            <div class="box-body">
-                                <div id="world-map" style="height: 250px; width: 100%;"></div>
-                            </div><!-- /.box-body-->
-                            <div class="box-footer no-border">
-                                <div class="row">
-                                    <div class="col-xs-4 text-center" style="border-right: 1px solid #f4f4f4">
-                                        <div id="sparkline-1"></div>
-                                        <div class="knob-label">Visitors</div>
-                                    </div><!-- ./col -->
-                                    <div class="col-xs-4 text-center" style="border-right: 1px solid #f4f4f4">
-                                        <div id="sparkline-2"></div>
-                                        <div class="knob-label">Online</div>
-                                    </div><!-- ./col -->
-                                    <div class="col-xs-4 text-center">
-                                        <div id="sparkline-3"></div>
-                                        <div class="knob-label">Exists</div>
-                                    </div><!-- ./col -->
-                                </div><!-- /.row -->
-                            </div>
-                        </div>
-                        <!-- /.box -->
-
-                        <!-- solid sales graph -->
-                        <div class="box box-solid bg-teal-gradient">
-                            <div class="box-header">
-                                <i class="fa fa-th"></i>
-                                <h3 class="box-title">Sales Graph</h3>
-                                <div class="box-tools pull-right">
-                                    <button class="btn bg-teal btn-sm" data-widget="collapse"><i class="fa fa-minus"></i></button>
-                                    <button class="btn bg-teal btn-sm" data-widget="remove"><i class="fa fa-times"></i></button>
-                                </div>
-                            </div>
-                            <div class="box-body border-radius-none">
-                                <div class="chart" id="line-chart" style="height: 250px;"></div>
-                            </div><!-- /.box-body -->
-                            <div class="box-footer no-border">
-                                <div class="row">
-                                    <div class="col-xs-4 text-center" style="border-right: 1px solid #f4f4f4">
-                                        <input type="text" class="knob" data-readonly="true" value="20" data-width="60" data-height="60" data-fgColor="#39CCCC">
-                                        <div class="knob-label">Mail-Orders</div>
-                                    </div><!-- ./col -->
-                                    <div class="col-xs-4 text-center" style="border-right: 1px solid #f4f4f4">
-                                        <input type="text" class="knob" data-readonly="true" value="50" data-width="60" data-height="60" data-fgColor="#39CCCC">
-                                        <div class="knob-label">Online</div>
-                                    </div><!-- ./col -->
-                                    <div class="col-xs-4 text-center">
-                                        <input type="text" class="knob" data-readonly="true" value="30" data-width="60" data-height="60" data-fgColor="#39CCCC">
-                                        <div class="knob-label">In-Store</div>
-                                    </div><!-- ./col -->
-                                </div><!-- /.row -->
+                                <a id="addUser" class="btn btn-info pull-right" href="users_addnew.php"><i class="fa fa-user-plus"></i> Add User</a>
                             </div><!-- /.box-footer -->
                         </div><!-- /.box -->
 
-                        <!-- Calendar -->
-                        <div class="box box-solid bg-green-gradient">
-                            <div class="box-header">
-                                <i class="fa fa-calendar"></i>
-                                <h3 class="box-title">Calendar</h3>
-                                <!-- tools box -->
-                                <div class="pull-right box-tools">
-                                    <!-- button with a dropdown -->
-                                    <div class="btn-group">
-                                        <button class="btn btn-success btn-sm dropdown-toggle" data-toggle="dropdown"><i class="fa fa-bars"></i></button>
-                                        <ul class="dropdown-menu pull-right" role="menu">
-                                            <li><a href="#">Add new event</a></li>
-                                            <li><a href="#">Clear events</a></li>
-                                            <li class="divider"></li>
-                                            <li><a href="#">View calendar</a></li>
-                                        </ul>
-                                    </div>
-                                    <button class="btn btn-success btn-sm" data-widget="collapse"><i class="fa fa-minus"></i></button>
-                                    <button class="btn btn-success btn-sm" data-widget="remove"><i class="fa fa-times"></i></button>
-                                </div><!-- /. tools -->
+
+
+                        <div class="box box-solid" id="actionArea">
+                            <div class="box-header with-border">
+                                <i class="fa fa-lightbulb-o"></i>
+                                <h3 class="box-title">Please Note</h3>
                             </div><!-- /.box-header -->
-                            <div class="box-body no-padding">
-                                <!--The calendar -->
-                                <div id="calendar" style="width: 100%"></div>
+                            <div class="box-body">
+                                <dl class="dl-horizontal">
+                                    <dt>User Name</dt>
+                                    <dd>This stands for the name of the account the Client uses to log into Senteyo.</dd>
+                                    <dd>It can be any name related to the Client's institution as long as its unique to them. For example Crane Forex Bureau may use a name such as CraneForex.</dd>
+                                    <dt>Email Address</dt>
+                                    <dd>This should be a valid email address acknowledged by the institution.</dd>
+                                    <dd>The password generation link is sent to this address to be completed by the Account holder.</dd>
+                                    <dt>Category</dt>
+                                    <dd>This refers to any the different institutions registered on our platform. Such as Forex Bureaus, Banks.</dd>
+                                </dl>
                             </div><!-- /.box-body -->
-                            <div class="box-footer text-black">
-                                <div class="row">
-                                    <div class="col-sm-6">
-                                        <!-- Progress bars -->
-                                        <div class="clearfix">
-                                            <span class="pull-left">Task #1</span>
-                                            <small class="pull-right">90%</small>
-                                        </div>
-                                        <div class="progress xs">
-                                            <div class="progress-bar progress-bar-green" style="width: 90%;"></div>
-                                        </div>
-
-                                        <div class="clearfix">
-                                            <span class="pull-left">Task #2</span>
-                                            <small class="pull-right">70%</small>
-                                        </div>
-                                        <div class="progress xs">
-                                            <div class="progress-bar progress-bar-green" style="width: 70%;"></div>
-                                        </div>
-                                    </div><!-- /.col -->
-                                    <div class="col-sm-6">
-                                        <div class="clearfix">
-                                            <span class="pull-left">Task #3</span>
-                                            <small class="pull-right">60%</small>
-                                        </div>
-                                        <div class="progress xs">
-                                            <div class="progress-bar progress-bar-green" style="width: 60%;"></div>
-                                        </div>
-
-                                        <div class="clearfix">
-                                            <span class="pull-left">Task #4</span>
-                                            <small class="pull-right">40%</small>
-                                        </div>
-                                        <div class="progress xs">
-                                            <div class="progress-bar progress-bar-green" style="width: 40%;"></div>
-                                        </div>
-                                    </div><!-- /.col -->
-                                </div><!-- /.row -->
-                            </div>
                         </div><!-- /.box -->
-
-                    </section><!-- right col -->
-                </div><!-- /.row (main row) -->
-
+                    </div>
+                    <!-- right column -->
+                    <div class="col-lg-3 col-md-12 col-sm-12 col-xs-12">
+                        <!-- Widget: user widget style 1 -->
+                        <div class="box box-widget widget-user-2">
+                            <!-- Add the bg color to the header using any of the bg-* classes -->
+                            <div class="widget-user-header bg-teal">
+                                <div class="widget-user-image">
+                                    <i class="fa fa-user-plus img-circle-icon"></i>
+                                    <img class="img-circle" src="/forex/images/otput/dahabshir.png" alt="">
+                                </div><!-- /.widget-user-image -->
+                                <div id="updatedUsersList">
+                                    <?php if ($forexusers > 0) { ?>
+                                        <h3 class="widget-user-username"><?php echo $recent_forex_name ?></h3>
+                                        <h5 class="widget-user-desc"><?php echo $recent_forex_email ?> :: Forex was added at 7:20pm | 28-Nov-2015</h5>
+                                    <?php } else { ?>                                
+                                        <h3 class="widget-user-username">Forex Empty</h3>
+                                        <h5 class="widget-user-desc">Currently there are no Forex Users</h5>
+                                    <?php } ?>
+                                </div>
+                            </div>
+                            <div class="box-footer no-padding">
+                                <ul class="nav nav-stacked">
+                                    <li><a href="#">Forex Bureaus <span class="pull-right badge bg-blue" id="forexUsersListed"><?php echo $forexusers ?></span></a></li>
+                                    <li><a href="#">Banks <span class="pull-right badge bg-aqua"><?php echo $bankusers ?></span></a></li>
+                                    <li><a href="#">SACCOs <span class="pull-right badge bg-green"><?php echo $saccousers ?></span></a></li>
+                                    <li><a href="#">Microfinance<span class="pull-right badge bg-red"><?php echo $microfinusers ?></span></a></li>
+                                    <li><a href="#">Money Transfer<span class="pull-right badge bg-red"><?php echo $mmagents ?></span></a></li>
+                                </ul>
+                            </div>
+                        </div><!-- /.widget-users update -->
+                        <div class="box box-solid">
+                            <div class="box-header with-border">
+                                <i class="fa fa-users"></i>
+                                <h3 class="box-title">Status of Users</h3>
+                            </div><!-- /.box-header -->
+                            <div class="box-body">
+                                <div class="box-footer no-padding">
+                                    <ul class="nav nav-stacked">
+                                        <li><a href="#">Active<span class="pull-right badge bg-aqua"><?php echo $forexusers ?></span></a></li>
+                                        <li><a href="#">Inactive <span class="pull-right badge bg-red"><?php echo $saccousers ?>1</span></a></li>
+                                    </ul>
+                                </div>
+                            </div><!-- /.box-body -->
+                        </div><!-- /.box -->
+                        <div class="box box-solid">
+                            <div class="box-header with-border">
+                                <i class="fa fa-lightbulb-o"></i>
+                                <h3 class="box-title">Please Note</h3>
+                            </div><!-- /.box-header -->
+                            <div class="box-body">
+                                <dl>
+                                    <dt>Active Users</dt>
+                                    <dd>Users become active once they have confirmed registration with their email address</dd>
+                                    <dt>Inactive Users</dt>
+                                    <dd>Users registered but have not yet confirmed their with their email address activation</dd>
+                                    <dd>It is recomended you follow up such users with a call or an email resent to their email address</dd>
+                                </dl>
+                            </div><!-- /.box-body -->
+                        </div><!-- /.box -->
+                    </div>
+                </div>
             </section><!-- /.content -->
         </div><!-- /.content-wrapper -->
     </div>
