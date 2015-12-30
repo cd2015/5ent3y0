@@ -17,8 +17,8 @@
                                 <li><a href="/forex/" title="Forex banking">Forex</a></li>
                             </ul>
                             <ul class="member-actions">
-                                <li><a href="#login" class="login">Log in</a></li>
-                                <li><a href="#subscribe" class="btn-white btn-small">Subscribe</a></li>
+                                <li><a href="/forex/views/login" class="login">Log in</a></li>
+                                <li class="version-one"><a href="#subscribe" class="btn-white btn-small">Subscribe</a></li>
                             </ul>
                         </nav>
                     </div>
@@ -34,7 +34,7 @@
                     <div class="hero-content text-center">
                         <h1>Welcome to the Banking Guide</h1>
                         <p class="intro">Your one stop for every last bit of Banking information you need! Check out our new Forex Site now</p>
-                        <a href="#" class="btn btn-fill btn-large btn-margin-right">Check Forex</a> <a href="#" class="btn btn-accent btn-large">Register</a>
+                        <a href="/forex/" class="btn btn-fill btn-large btn-margin-right">Check Forex</a> <a href="#" class="btn btn-accent btn-large">Register</a>
                     </div>
                 </div>
             </div>
