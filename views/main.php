@@ -32,8 +32,8 @@
             <div class="row">
                 <div class="col-md-10 col-md-offset-1">
                     <div class="hero-content text-center">
-                        <h1>Welcome to the Banking Guide</h1>
-                        <p class="intro">Your one stop for every last bit of Banking information you need! Check out our new Forex Site now</p>
+                        <h1>Welcome to the Banking & Financial Guide</h1>
+                        <p class="intro">Get the latest information and updates on Banking & Financial deals as soon as they happen. Checkout the top Forex in town!</p>
                         <a href="/forex/" class="btn btn-fill btn-large btn-margin-right">Check Forex</a> <a href="#" class="btn btn-accent btn-large">Register</a>
                     </div>
                 </div>
@@ -51,7 +51,7 @@
                     </div>
                     <div class="intro-content">
                         <h5>Search Forex</h5>
-                        <p>Find the nearest Forex around by you. Search by location, currency and or brach and select from a list for your of results.
+                        <p>Get to know of that nearest Forex bureau near you. Search by Location or Currency
                         </p>
                     </div>
                 </div>
@@ -61,7 +61,7 @@
                     </div>
                     <div class="intro-content">
                         <h5>Compare Rates</h5>
-                        <p>Compare the the different rankings and trading for the different Forex, over for the day, week or month.</p>
+                        <p>What ranks higher or lower is all you need for that better transaction decision. Be it by day, week or monthly.</p>
                     </div>
                 </div>
                 <div class="col-md-4 intro-feature">
@@ -70,7 +70,7 @@
                     </div>
                     <div class="intro-content last">
                         <h5>Keep Track</h5>
-                        <p>Keep control of your Forex trading by tracking your exchange with out. Its not too late, start today</p>
+                        <p>Now you have the capacity to control your Forex transactions at all times.</p>
                     </div>
                 </div>
             </div>
@@ -80,7 +80,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <h3>Over 100 Forex Bureaux and 200 Thousands of individuals in Kampala are using this guide every day</h3>
+                    <h3>Over 100 Banks and Forex bureaus, thousands of persons use this guide daily.</h3>
                 </div>
             </div>
             <div class="row">

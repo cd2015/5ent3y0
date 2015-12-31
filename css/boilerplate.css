@@ -287,8 +287,11 @@ td { vertical-align: top; }
     h2, h3 { page-break-after: avoid; }
 }
 /*=============================================================================
-   Versioning
+   Versioning and Tweaks
 ========================================================================== */
 .version-one{
-    display: none;
+    display: none !important;
+}
+img{
+    background-color: #eee !important;
 }
