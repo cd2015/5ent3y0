@@ -28,13 +28,13 @@
         <div class="navbar-custom-menu">
             <ul class="nav navbar-nav">
                 <!-- Messages: style can be found in dropdown.less-->
-                <li class="dropdown messages-menu">
+                <li class="dropdown messages-menu" style="display: none">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                         <i class="fa fa-envelope-o"></i>
-                        <span class="label label-success">4</span>
+                        <span class="label label-success">125</span>
                     </a>
                     <ul class="dropdown-menu">
-                        <li class="header">You have 4 messages</li>
+                        <li class="header">You have 125 messages</li>
                         <li>
                             <!-- inner menu: contains the actual data -->
                             <ul class="menu">
@@ -47,7 +47,7 @@
                                             Support Team
                                             <small><i class="fa fa-clock-o"></i> 5 mins</small>
                                         </h4>
-                                        <p>Why not buy a new awesome theme?</p>
+                                        <p>Why not join our Forex System now?</p>
                                     </a>
                                 </li><!-- end message -->
                                 <li>
@@ -59,7 +59,7 @@
                                             Senteyo Design Team
                                             <small><i class="fa fa-clock-o"></i> 2 hours</small>
                                         </h4>
-                                        <p>Why not buy a new awesome theme?</p>
+                                        <p>Why not join our Forex System now?</p>
                                     </a>
                                 </li>
                                 <li>
@@ -71,7 +71,7 @@
                                             Developers
                                             <small><i class="fa fa-clock-o"></i> Today</small>
                                         </h4>
-                                        <p>Why not buy a new awesome theme?</p>
+                                        <p>Why not join our Forex System now?</p>
                                     </a>
                                 </li>
                                 <li>
@@ -83,7 +83,7 @@
                                             Sales Department
                                             <small><i class="fa fa-clock-o"></i> Yesterday</small>
                                         </h4>
-                                        <p>Why not buy a new awesome theme?</p>
+                                        <p>Why not join our Forex System now?</p>
                                     </a>
                                 </li>
                                 <li>
@@ -95,7 +95,7 @@
                                             Reviewers
                                             <small><i class="fa fa-clock-o"></i> 2 days</small>
                                         </h4>
-                                        <p>Why not buy a new awesome theme?</p>
+                                        <p>Why not join our Forex System now?</p>
                                     </a>
                                 </li>
                             </ul>
@@ -107,7 +107,7 @@
                 <li class="dropdown notifications-menu">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                         <i class="fa fa-bell-o"></i>
-                        <span class="label label-warning">10</span>
+                        <span class="label label-info">4</span>
                     </a>
                     <ul class="dropdown-menu">
                         <li class="header">You have 10 notifications</li>
@@ -147,18 +147,18 @@
                 <!-- Tasks: style can be found in dropdown.less -->
                 <li class="dropdown tasks-menu">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                        <i class="fa fa-flag-o"></i>
-                        <span class="label label-danger">9</span>
+                        <i class="fa fa-calendar"></i>
+                        <span class="label label-danger">3</span>
                     </a>
                     <ul class="dropdown-menu">
-                        <li class="header">You have 9 tasks</li>
+                        <li class="header">You have 3 tasks</li>
                         <li>
                             <!-- inner menu: contains the actual data -->
                             <ul class="menu">
                                 <li><!-- Task item -->
                                     <a href="#">
                                         <h3>
-                                            Design some buttons
+                                            Change some Forex Rates
                                             <small class="pull-right">20%</small>
                                         </h3>
                                         <div class="progress xs">
@@ -171,7 +171,7 @@
                                 <li><!-- Task item -->
                                     <a href="#">
                                         <h3>
-                                            Create a nice theme
+                                            Add some currencies
                                             <small class="pull-right">40%</small>
                                         </h3>
                                         <div class="progress xs">
@@ -184,7 +184,7 @@
                                 <li><!-- Task item -->
                                     <a href="#">
                                         <h3>
-                                            Some task I need to do
+                                            Change details for Branch X on Kings Road
                                             <small class="pull-right">60%</small>
                                         </h3>
                                         <div class="progress xs">

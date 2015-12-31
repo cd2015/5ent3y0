@@ -13,7 +13,7 @@ require_once('../../header.php');
 <body id="top" class="hold-transition skin-teal sidebar-mini">
     <div class="wrapper" style="min-height: 900px;">
         <?php require_once ('../../admin_header.php') ?>;
-        <?php require_once ('../../admin/admin_main-sidebar.php') ?>;
+        <?php require_once ('../../admin/admin_main_sidebar.php') ?>;
         <?php require_once ('./add_new_user.php') ?>;
     </div>
     <?php
