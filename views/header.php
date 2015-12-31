@@ -31,7 +31,7 @@
         <link rel="stylesheet" href="bower_components/animate.css/animate.min.css">
 
         <link rel="stylesheet" href="/css/etline-font.css">
-        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+        <!--<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">-->
         <link href="/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
         <link href="/css/boilerplate.css" rel="stylesheet" type="text/css">
