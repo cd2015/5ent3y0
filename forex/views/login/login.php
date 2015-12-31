@@ -20,7 +20,7 @@ echo (($current_page != "/forex/views/login/") && !isset($_GET['login_error_msg'
         <div class="row">
             <div class="col-md-6 col-md-offset-3">
                 <h3>Admin | Login</h3>
-                <p>For Forex Bureau Account Management</p>
+                <p class="version-one">For Forex Bureau Account Management</p>
 <?php
 //echo "dont snik";
 //echo $msg;
