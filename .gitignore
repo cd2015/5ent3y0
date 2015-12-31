@@ -1,2 +1,5 @@
 /nbproject/
 /nbproject/private/
+/.openshift
+/*.sublime-project
+/*.sublime-workspace

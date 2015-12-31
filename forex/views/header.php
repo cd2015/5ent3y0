@@ -64,16 +64,16 @@ $current_page = $_SERVER["REQUEST_URI"];
                                     <li><a href="/" title="Go back to the Senteyo">Home</a></li>
                                     <li><a href="/forex/" title="Forex banking">Forex Trading</a></li>
                                     <li><a href="#mobilebanking" title="Mobile Banking">Top Rates</a></li>
-                                    <li><a href="#blog">Statistics</a></li>
-                                    <li><a href="#blog">Articles</a></li>
-                                    <li><a href="#mobilebanking" title="Mobile Banking">Forum</a></li>
+                                    <li class="version-one"><a href="#blog">Statistics</a></li>
+                                    <li class="version-one"><a href="#blog">Articles</a></li>
+                                    <li class="version-one"><a href="#mobilebanking" title="Mobile Banking">Forum</a></li>
                                 </ul>
                                 <ul class="member-actions">
                                     <?php
                                     echo (($current_page != "/forex/views/login/") && !isset($_GET['login_error_msg'])) ? ''
                                             . '<li><a href="' . $path . 'forex/views/login" class="login">Log in</a></li>' : "";
                                     ?>
-                                    <li><a href="#subscribe" class="btn-white btn-small">Subscribe</a></li>
+                                    <li class="version-one"><a href="#subscribe" class="btn-white btn-small">Subscribe</a></li>
                                 </ul>
                             </nav>
                         </div>
