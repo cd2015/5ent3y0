@@ -17,7 +17,7 @@
                 </div>
                 <div class="intro-content">
                     <h5>Search Forex</h5>
-                    <p>Find the nearest Forex around by you. Search by location, currency and or brach and select from a list for your of results.
+                    <p>Move now to the nearest point and make that timely Forex exchange.
                     </p>
                 </div>
             </div>
@@ -27,7 +27,7 @@
                 </div>
                 <div class="intro-content">
                     <h5>Compare Rates</h5>
-                    <p>Compare the the different rankings and trading for the different Forex, over for the day, week or month.</p>
+                    <p>At last you can grant yourself that power to make that positive decision</p>
                 </div>
             </div>
             <div class="col-md-4 intro-feature">
@@ -36,7 +36,7 @@
                 </div>
                 <div class="intro-content last">
                     <h5>Keep Track</h5>
-                    <p>Keep control of your Forex trading by tracking your exchange with out. Its not too late, start today</p>
+                    <p>Keep in touch & knowledgeable with the best rates always</p>
                 </div>
             </div>
         </div>
@@ -59,7 +59,7 @@
             <div class="col-md-6 col-sm-12 col-xs-12 rightcol">
                 <h5>For the Customers</h5>
                 <p>Get the latest information about the current and best Forex trading in town. 
-                    Compare prices and get the best choice for your money. 
+                    Compare rates and get value for your money. 
                     Looking for the nearest brach around you? We have you covered </p>
             </div>
         </div>
