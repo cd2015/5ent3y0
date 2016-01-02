@@ -36,7 +36,7 @@
                     <i class="fa fa-dashboard"></i> <span>Dashboard</span> <i class="fa fa-angle-left pull-right"></i>
                 </a>
                 <ul class="treeview-menu">
-                    <li class="active"><a href="#"><i class="fa fa-circle-o"></i> Home</a></li>
+                    <li class="active"><a href="admin.php"><i class="fa fa-circle-o"></i> Home</a></li>
                     <li><a href="#"><i class="fa fa-circle-o"></i>History</a></li>
                 </ul>
             </li>
@@ -83,20 +83,20 @@
             </li>
             <li class="header">CUSTOMERS</li>
             <li class="treeview">
-                <a href="#">
+                <a href="customers_forex.php">
                     <i class="fa fa-exchange"></i>
                     <span>Forex</span>
                     <span class="label label-primary pull-right">25</span>
                 </a>
             </li>
-            <li class="treeview">
+            <li class="treeview version-one">
                 <a href="#">
                     <i class="fa fa-university"></i>
                     <span>Banks</span>
                     <span class="label label-primary pull-right">12</span>
                 </a>
             </li>
-            <li class="treeview">
+            <li class="treeview version-one">
                 <a href="#">
                     <i class="fa fa-money"></i>
                     <span>Microfinance</span>
