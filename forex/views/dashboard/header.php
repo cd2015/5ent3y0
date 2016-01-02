@@ -38,11 +38,7 @@ $current_page = $_SERVER["REQUEST_URI"];
         <link href="/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
         <link href="/css/boilerplate.css" rel="stylesheet" type="text/css">
-        <link href="/cssX/custom.css" rel="stylesheet" type="text/css">
         <link rel="stylesheet" href="/css/dashboard.css">
-
-        <link rel="stylesheet" href="/cssX/styles.css">
-        <link rel="stylesheet" href="/cssX/dashboard_queries.css">
         <link rel="stylesheet" href="/css/charts.css">
 
         <script src="/scripts/respond.min.js"></script>

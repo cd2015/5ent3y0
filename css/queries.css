@@ -227,10 +227,6 @@
         padding: 0 20px;
     }
 
-    footer .social-share {
-        display: none;
-    }
-
     footer .footer-links {
         margin: 120px 0 120px 0;
     }
@@ -319,5 +315,12 @@
 
 }
 
-@media screen and (max-width:320px) {
+@media screen and (max-width:990px) {
+    footer .footer-links {
+        margin: 20px 0 20px 0;
+    }
+    footer .social-share{
+        padding: 20px 0px 80px 20px;
+        border-top: dashed 1px #4E566C;
+    }
 }

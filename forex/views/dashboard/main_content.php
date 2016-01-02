@@ -219,13 +219,13 @@
                         <!-- User Account: style can be found in dropdown.less -->
                         <li class="dropdown user user-menu">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                <img src="users/castor.jpg" class="user-image" alt="user Avatar">
+                                <img src="users/" class="user-image" alt="user Avatar">
                                 <span class="hidden-xs">Sowed Castelli</span>
                             </a>
                             <ul class="dropdown-menu">
                                 <!-- User image -->
                                 <li class="user-header">
-                                    <img src="users/castor.jpg" class="img-circle" alt="User Image">
+                                    <img src="users/" class="img-circle" alt="User Image">
                                     <p>
                                         Sowed Castelli - Forex Admin
                                         <small>Nakasero Branch</small>
