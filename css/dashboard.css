@@ -5258,16 +5258,6 @@ table.text-center th {
     -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
 }
 
-
-
-
-
-
-
-
-
-
-
 /*
 Footer Styles go here: Reflecting the general styles
 */
@@ -5317,12 +5307,8 @@ footer span.fa-heart {
     font-size: 15px;
     margin: 0 2px; }
 footer .social-share {
-    position: absolute;
-    background-color: rgba(34, 100,100,0.2);
-    right: 0;
-    width: 40%;
-    height: 100%;
-    padding: 142px 0 0 70px; }
+    padding: 142px 0 0 70px;
+}
 footer .social-share p {
     color: #fff;
     text-transform: uppercase;
@@ -5355,4 +5341,18 @@ footer .social-share a:hover {
 footer .social-share a i {
     margin-top: 20px; }
 footer .footer-links {
-    margin: 120px 0 120px 0; }
+    margin: 120px 0 120px 0;}
+
+
+/*==============================================================================
+Dashboard Media Queries
+ =============================================================================*/
+@media screen and (max-width:990px) {
+    footer .footer-links {
+        margin: 20px 0 20px 0;
+    }
+    footer .social-share{
+        padding: 20px 0px 80px 20px;
+        border-top: dashed 1px #4E566C;
+    }
+}

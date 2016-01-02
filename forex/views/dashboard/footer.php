@@ -12,20 +12,24 @@
             <div class="col-md-6 col-sm-12 col-xs-12">
                 <div class="footer-links">
                     <ul class="footer-group">
-                        <li><a href="#banking">Banking</a></li>
+                        <li class="version-one"><a href="#banking">Banking</a></li>
                         <li><a href="/forex/" title="Forex banking">Forex</a></li>
-                        <li><a href="#mobilebanking" title="Mobile Banking">Micro finance</a></li>
-                        <li><a href="#blog">Blog</a></li>
-                        <li><a href="https://www.cyberdynamics.co.ug/">Cyber Dynamics</a></li>
+                        <li class="version-one"><a href="#mobilebanking" title="Mobile Banking">Micro finance</a></li>
+                        <li class="version-one"><a href="#blog">Blog</a></li>
+                        <li class="version-one"><a href="https://www.cyberdynamics.co.ug/">Cyber Dynamics</a></li>
                     </ul>
                     <p>Copyright © 2015 
                         <a href="/forex/views/login/admin_login.php">Banking Guide | Forex</a><br>
                         <a href="#">&copy; </a><span class="fa fa-heart pulse2"></span> | <a href="https://www.cyberdynamics.co.ug/">Cyber Dynamics</a> 2015</p>
                 </div>
             </div>
-            <div class="social-share col-md-4 col-sm-12 col-xs-12">
+            <div class="col-lg-5 col-md-6 col-xs-12 social-share">
                 <p>Tell friends about Senteyo!</p>
-                <a href="https://twitter.com/senteyo" class="twitter-share"><i class="fa fa-twitter icon-twitter"></i></a> <a href="https://facebook.com/senteyo" class="facebook-share"><i class="fa fa-facebook icon-facebook"></i></a>
+                <a href="https://twitter.com/sentey0" class="twitter-share"><i class="fa fa-twitter icon-twitter"></i></a>
+                <a href="https://facebook.com/sentey0" class="facebook-share"><i class="fa fa-facebook icon-facebook"></i></a>
+                <a href="https://linkedin.com/sentey0" class="linkedin-share version-one"><i class="fa fa-linkedin icon-linkedin"></i></a>
+                <a href="https://plus.google.com/sentey0" class="googleplus-share version-one"><i class="fa fa-google-plus icon-googleplus"></i></a>
+                <a href="https://web.whatsapp.com/sentey0" class="whatsapp-share version-one"><i class="fa fa-whatsapp icon-whatsapp"></i></a>
             </div>
         </div>
     </div>
