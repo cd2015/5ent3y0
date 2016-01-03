@@ -3,3 +3,4 @@
 /.openshift
 /*.sublime-project
 /*.sublime-workspace
+/connection.php
