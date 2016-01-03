@@ -12,7 +12,7 @@ require_once('header.php');
     <div class="wrapper" style="min-height: 800px;">
         <?php
         require_once ('admin_header.php');
-        require_once ('admin_main-sidebar.php');
+        require_once ('admin_main_sidebar.php');
         require_once ('customers_all_forex.php');
         require_once ('admin_control_side_bar.php');
         ?>;
