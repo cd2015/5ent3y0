@@ -234,7 +234,7 @@ if ($forexusers > 0) {
                                 <li><a href="#">&raquo;</a></li>
                             </ul>
                         </div>
-                        <a id="addUser" class="btn btn-info pull-right" href="users_addnew.php"><i class="fa fa-user-plus"></i> Add User</a>
+                        <a id="addUser" class="btn btn-info pull-right version-one" href="users_addnew.php"><i class="fa fa-user-plus"></i> Add User</a>
                     </div><!-- /.box-footer -->
                 </div><!-- /.box -->
             </div>
