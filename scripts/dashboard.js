@@ -52,26 +52,21 @@ $(document).ready(function () {
             parentDiv = "";
         });
         $('#userOperation .modal #confirm').click(function () {
-            alert("Why am I even here");
             var listedUser = {userid: selecteduserId, useraction: 'delete'};
-            var deleteUserPost = $.post("users_delete_user.php", listedUser, function (data) {
-            })
-                    .done(function () {
-                        alert(data);
-                        $('#userOperation .modal.modal-danger').css('display', 'none').fadeOut(2000, "swing");
-                        $(parentDiv).css('background-color', '#FCD1D1').fadeOut(2000, "swing", function () {
-                            parentDiv.remove();
-                        });
-
-                    })
-                    .fail(function () {
-                        alert("Server Error, please check your internet connection");
-                    })
-                    .always(function () {
-                        $('#updatedUsersList h3').html(itemName);
-                        $('#updatedUsersList h5').html("With email " + itemEmail + ", was succesfully deleted");
-                        $('#forexUsersListed').load("users_updated_list.php #forexUsersListed");
-                    });
+            $.post("users_delete_user.php", listedUser, function (data) {
+            }).done(function () {
+                //alert(data);
+                $('#userOperation .modal.modal-danger').css('display', 'none').fadeOut(2000, "swing");
+                $(parentDiv).css('background-color', '#FCD1D1').fadeOut(2000, "swing", function () {
+                    parentDiv.remove();
+                });
+            }).fail(function () {
+                alert("Server Error, please check your internet connection");
+            }).always(function () {
+                $('#updatedUsersList h3').html(itemName);
+                $('#updatedUsersList h5').html("With email " + itemEmail + ", was succesfully deleted");
+                $('#forexUsersListed').load("users_updated_list.php #forexUsersListed");
+            });
         });
         //return false;
     });
@@ -83,7 +78,7 @@ $(document).ready(function () {
         var itemName = $(parentDiv).find("td.uname").html();
         var itemEmail = $(parentDiv).find("td.uemail").html();
         var itemCategory = $(parentDiv).find("td.ucategory").html();
-
+        
         var allMsgBox = $('#userOperation .modal.editUser');
         $(allMsgBox).find('input#usernameID').val(itemName);
         $(allMsgBox).find('input#useremailID').val(itemEmail);
@@ -99,37 +94,33 @@ $(document).ready(function () {
             parentDiv = "";
         });
         $('#userOperation .modal #confirm').click(function () {
-            var myDate = new Date();
-            alert(myDate);
             var listedUser = {
                 userid: selecteduserId,
                 username: $(allMsgBox).find('input#usernameID').val(),
                 useremail: $(allMsgBox).find('input#useremailID').val(),
                 usertype: $(allMsgBox).find('input#usertypeID').val(),
-                userdate: myDate,
+                userdate: 'Janauary 2, 2016',
                 useraction: 'edit'
             };
-            var editUserPost = $.post("users_edit_userupdate.php", listedUser, function (data) {
-            })
-                    .done(function () {
-                        $('#userOperation .modal.editUser').css('display', 'none').fadeOut(2000, "swing");
+            $.post("users_edit_userupdate.php", listedUser, function (data) {
+            }).done(function () {
+                $('#userOperation .modal.editUser').css('display', 'none').fadeOut(2000, "swing");
 
-                        $(parentDiv).css('border-left', 'solid 8px rgb(62, 174, 62)').css('color', 'rgb(62, 174, 62)');
+                $(parentDiv).css('border-left', 'solid 8px rgb(62, 174, 62)').css('color', 'rgb(62, 174, 62)');
 
-                        $(parentDiv).find("td.uname").html(listedUser.username);
-                        $(parentDiv).find("td.uemail").html(listedUser.useremail);
-                        $(parentDiv).find("td.ucategory").html(listedUser.usertype);
-                        $(parentDiv).find("td.udate").html(myDate);
-                        
-                    })
-                    .fail(function () {
-                        alert("Server Error, please check your internet connection");
-                    })
-                    .always(function () {
-                        $('#updatedUsersList h3').html(itemName);
-                        $('#updatedUsersList h5').html("With email " + itemEmail + ", was succesfully deleted");
-                        $('#forexUsersListed').load("users_updated_list.php #forexUsersListed");
-                    });
+                $(parentDiv).find("td.uname").html(listedUser.username);
+                $(parentDiv).find("td.uemail").html(listedUser.useremail);
+                $(parentDiv).find("td.ucategory").html(listedUser.usertype);
+                $(parentDiv).find("td.udate").html(listedUser.userdate);
+
+            }).fail(function () {
+                alert("Server Error, please check your internet connection");
+            }).always(function () {
+                //Fix the NOtification update at the side
+                $('#updatedUsersList h3').html(itemName);
+                $('#updatedUsersList h5').html("With email " + itemEmail + ", was succesfully deleted");
+                $('#forexUsersListed').load("users_updated_list.php #forexUsersListed");
+            });
         });
     });
 });

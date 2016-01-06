@@ -22,10 +22,8 @@ $current_page = $_SERVER["REQUEST_URI"];
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>
-            <?php
-            echo (isset($user_type) && $user_type == 'admin')? 'System Admin'  : 'Forex Admin';
-            ?>
-             | Banking Guide</title>
+            <?php echo (isset($user_type) && $user_type == 'admin') ? 'System Admin' : 'Forex Admin'; ?>
+            | Banking Guide</title>
         <meta name="description" content="">
         <link rel="apple-touch-icon" href="/apple-touch-icon.png">
         <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16" />
