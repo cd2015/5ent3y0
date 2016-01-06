@@ -54,8 +54,9 @@ $(document).ready(function () {
         $('#userOperation .modal #confirm').click(function () {
             var listedUser = {userid: selecteduserId, useraction: 'delete'};
             $.post("users_delete_user.php", listedUser, function (data) {
-            }).done(function () {
-                //alert(data);
+            }).done(function (data) {
+                alert(data);
+                console.log(data);
                 $('#userOperation .modal.modal-danger').css('display', 'none').fadeOut(2000, "swing");
                 $(parentDiv).css('background-color', '#FCD1D1').fadeOut(2000, "swing", function () {
                     parentDiv.remove();
