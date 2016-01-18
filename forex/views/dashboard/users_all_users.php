@@ -4,6 +4,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+require_once ('./timekeeper.php');
 
 $db = Db::getDbInstance();
 
@@ -210,7 +211,7 @@ if ($forexusers > 0) {
                                             <?php } ?>
                                         </td>
                                         <td class="ucategory"><?php echo "Forex Bureau" ?></td>
-                                        <td class="udate"><?php echo $fx_row_user["FxUser_Time"] ?></td>
+                                        <td class="udate"><?php echo time_elapsed_string($fx_row_user["FxUser_Time"]) ?></td>
                                         <td>
                                             <ul class="tools" id="<?php echo $fx_row_user["FxUserId"] ?>">
                                                 <i class="fa fa-trash-o" title="Delete <?php echo $fx_row_user["FxUserName"]; ?>"></i>
