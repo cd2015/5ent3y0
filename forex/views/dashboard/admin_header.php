@@ -14,10 +14,10 @@
     <!-- Logo -->
     <a href="/forex/" class="logo">
         <!-- mini logo for sidebar mini 50x50 pixels -->
-        <span class="logo-mini"><b>f</b>BG</span>
+        <span class="logo-mini"><b>s</b>AD</span>
         <!-- logo for regular state and mobile devices -->
-        <span class="logo-lg" style="display: none"><b>banking</b>GUIDE</span>
-        <img src="../../../bg-logo-forex.png" alt="Banking Guide | Forex"/>
+        <span class="logo-lg" style="display: none"><b>senteyo</b>ADMIN</span>
+        <img src="../../../admin-logo.png" alt="Senteyo Systems Admin"/>
     </a>
     <!-- Header Navbar: style can be found in header.less -->
     <nav class="navbar navbar-static-top" role="navigation">
