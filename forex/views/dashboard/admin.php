@@ -6,6 +6,7 @@
  */
 
 require_once('../../../connection.php');
+$user_type = "admin";
 require_once('header.php');
 ?>
 <body id="top" class="hold-transition skin-teal sidebar-mini">

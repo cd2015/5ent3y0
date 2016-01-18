@@ -115,7 +115,7 @@ if ($forexusers > 0) {
                             <div class="modal-dialog">
                                 <div class="modal-content">
                                     <div class="modal-header">
-                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close" title="Dont Delete, close"><span aria-hidden="true">&times;</span></button>
                                         <h4 class="modal-title">Deleting User</h4>
                                     </div>
                                     <div class="modal-body">
@@ -125,7 +125,7 @@ if ($forexusers > 0) {
                                         </p>
                                     </div>
                                     <div class="modal-footer">
-                                        <button id="cancel" type="button" class="btn btn-outline pull-left" data-dismiss="modal">Cancel</button>
+                                        <button id="cancel" type="button" class="btn btn-outline pull-left" data-dismiss="modal" title="Dont Delete, Return to list">Cancel</button>
                                         <button id="confirm" type="button" class="btn btn-outline">Confirm</button>
                                     </div>
                                 </div><!-- /.modal-content -->
@@ -137,7 +137,7 @@ if ($forexusers > 0) {
                             <div class="modal-dialog  bg-teal">
                                 <div class="modal-content">
                                     <div class="modal-header">
-                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close" title="Close"><span aria-hidden="true">&times;</span></button>
                                         <h4 class="modal-title">Editing User</h4>
                                     </div>
                                     <form method="post" name="edit_user" id="editUserForm">
@@ -174,7 +174,7 @@ if ($forexusers > 0) {
                                             </div><!-- /.box -->
                                         </div>
                                         <div class="modal-footer">
-                                            <button id="cancel" type="button" class="btn btn-outline pull-left" data-dismiss="modal">Cancel</button>
+                                            <button id="cancel" type="button" class="btn btn-outline pull-left" data-dismiss="modal" title="Go back to list">Cancel</button>
                                             <input id="confirm"  name="edituser" type="button" value="Confirm Edit" class="btn btn-info confirm-edit pull-right"/>
                                         </div>    
                                     </form>
