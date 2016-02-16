@@ -11,9 +11,7 @@ $(document).ready(function () {
                     $('#RegisterUserForm').each(function () {
                         this.reset();
                     });
-
                     $('#userAddedSuccess').css('display', 'block').fadeOut(8000, "swing");
-
                 })
                 .fail(function () {
                     alert("Server Error, please check your internet connection");
@@ -29,19 +27,14 @@ $(document).ready(function () {
     $('.fa.fa-trash-o').click(function (evt) {
         var selecteduserId = $(this).parent().attr('id');
         var parentDiv = $(this).parents('tr');
-
         var itemName = $(parentDiv).find("td.uname").html();
-
         var itemEmail = $(parentDiv).find("td.uemail").html();
-
         var itemStatus = $(parentDiv).find("td.ustatus").html();
         var itemCategory = $(parentDiv).find("td.ucategory").html();
-
         var allMsgBox = $('#userOperation .modal.deleteUser');
 
         $(allMsgBox).find('.modal-body p span.name').html(itemName);
         $(allMsgBox).find('.modal-body p span.email').html(itemEmail);
-
         allMsgBox.css('display', 'block');
         $('#userOperation .modal button.close').click(function () {
             allMsgBox.css('display', 'none');
@@ -53,7 +46,7 @@ $(document).ready(function () {
         });
         $('#userOperation .modal #confirm').click(function () {
             var listedUser = {userid: selecteduserId, useraction: 'delete'};
-            $.post("users_delete_user.php", listedUser, function (data) {
+            var editUserPost = $.post("users_delete_user.php", listedUser, function (data) {
             }).done(function (data) {
                 alert(data);
                 console.log(data);
@@ -75,16 +68,14 @@ $(document).ready(function () {
     $('.fa.fa-edit').click(function (evt) {
         var selecteduserId = $(this).parent().attr('id');
         var parentDiv = $(this).parents('tr');
-
         var itemName = $(parentDiv).find("td.uname").html();
         var itemEmail = $(parentDiv).find("td.uemail").html();
         var itemCategory = $(parentDiv).find("td.ucategory").html();
-        
         var allMsgBox = $('#userOperation .modal.editUser');
+
         $(allMsgBox).find('input#usernameID').val(itemName);
         $(allMsgBox).find('input#useremailID').val(itemEmail);
-        $(allMsgBox).find('input#usertypeID').val(itemCategory);
-
+        $(allMsgBox).find('#usertypeID :selected').text(itemCategory);
         allMsgBox.css('display', 'block');
         $('#userOperation .modal button.close').click(function () {
             allMsgBox.css('display', 'none');
@@ -99,27 +90,27 @@ $(document).ready(function () {
                 userid: selecteduserId,
                 username: $(allMsgBox).find('input#usernameID').val(),
                 useremail: $(allMsgBox).find('input#useremailID').val(),
-                usertype: $(allMsgBox).find('input#usertypeID').val(),
+                usertype: $(allMsgBox).find('#usertypeID :selected').text(),
                 userdate: 'Janauary 2, 2016',
                 useraction: 'edit'
-            };
-            $.post("users_edit_userupdate.php", listedUser, function (data) {
-            }).done(function () {
+            };            
+            var editUserPost = $.post("users_edit_userupdate.php", listedUser, function (data) {
+            },'json').done(function (data) {
+                alert(data);
+                alert(data.first_name);
+                console.log(data);
                 $('#userOperation .modal.editUser').css('display', 'none').fadeOut(2000, "swing");
-
                 $(parentDiv).css('border-left', 'solid 8px rgb(62, 174, 62)').css('color', 'rgb(62, 174, 62)');
-
                 $(parentDiv).find("td.uname").html(listedUser.username);
                 $(parentDiv).find("td.uemail").html(listedUser.useremail);
                 $(parentDiv).find("td.ucategory").html(listedUser.usertype);
                 $(parentDiv).find("td.udate").html(listedUser.userdate);
-
             }).fail(function () {
                 alert("Server Error, please check your internet connection");
             }).always(function () {
                 //Fix the NOtification update at the side
-                $('#updatedUsersList h3').html(itemName);
-                $('#updatedUsersList h5').html("With email " + itemEmail + ", was succesfully deleted");
+                $('#updatedUsersList h3').html(listedUser.username);
+                $('#updatedUsersList h5').html("With email " + listedUser.useremail + ", was succesfully edited");
                 $('#forexUsersListed').load("users_updated_list.php #forexUsersListed");
             });
         });

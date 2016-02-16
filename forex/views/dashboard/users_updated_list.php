@@ -24,7 +24,6 @@ $bankusers = $query_banks_result = $query_banks->rowCount();
 $saccousers = $query_sacco_result = $query_sacco->rowCount();
 $microfinusers = $query_microfinance_result = $query_microfinance->rowCount();
 $mmagents = $query_moneytransfer_result = $query_moneytransfer->rowCount();
-echo "Sickness";
 ?>
 
 <div id="updatedUsersList">
