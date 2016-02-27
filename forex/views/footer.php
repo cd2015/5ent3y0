@@ -60,5 +60,8 @@
     ga('send', 'pageview');
 </script>
 <script src="/scripts/app.js"></script>
+<script src="/scripts/wizard.js"></script>
+<script src="/scripts/jquery.bootstrap.wizard.js"></script>
+<script src="/scripts/jquery.validate.min.js"></script>
 </body>
 </html>

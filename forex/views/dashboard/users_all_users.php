@@ -161,11 +161,11 @@ if ($forexusers > 0) {
                                                     <div class="input-group">
                                                         <label for="usertypeID" class="input-group-addon"><i class="fa fa-users"></i></label>
                                                         <select name="usercategory" id="usertypeID" class="form-control" >
-                                                            <option value="forex">Forex Bureau</option>
-                                                            <option value="bank">Bank</option>
-                                                            <option value="sacco">SACCO</option>
-                                                            <option value="micro">Microfinance</option>
-                                                            <option value="moneyTrans">Money Transfer</option>
+                                                            <option value="forex">1 Forex Bureau</option>
+                                                            <option value="bank">2 Bank</option>
+                                                            <option value="sacco">3 SACCO</option>
+                                                            <option value="micro">4 Microfinance</option>
+                                                            <option value="moneyTrans">5 Money Transfer</option>
                                                         </select>
                                                     </div>
                                                     <br>

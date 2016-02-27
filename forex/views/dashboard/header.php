@@ -42,7 +42,7 @@ $current_page = $_SERVER["REQUEST_URI"];
         <link href="/css/boilerplate.css" rel="stylesheet" type="text/css">
         <link rel="stylesheet" href="/css/dashboard.css">
         <link rel="stylesheet" href="/css/charts.css">
-
+        <link rel="stylesheet" href="/css/wizard.css">
         <script src="/scripts/respond.min.js"></script>
         <script src="/scripts/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
 
