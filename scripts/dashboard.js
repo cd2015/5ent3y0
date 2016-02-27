@@ -46,7 +46,7 @@ $(document).ready(function () {
         });
         $('#userOperation .modal #confirm').click(function () {
             var listedUser = {userid: selecteduserId, useraction: 'delete'};
-            var editUserPost = $.post("users_delete_user.php", listedUser, function (data) {
+            var editUserPost = $.post("users_delete_user.php", listedUser, function (data) {  //Look into this area
             }).done(function (data) {
                 alert(data);
                 console.log(data);

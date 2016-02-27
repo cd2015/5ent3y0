@@ -24,6 +24,7 @@ Global Styles
 
 body {
     font-family: Avenir, Proxima Nova,"Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 0.875em;
     color: rgba(0, 51, 51, 0.8);
     -webkit-text-size-adjust: 100%;
     font-weight: normal;
